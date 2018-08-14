@@ -290,8 +290,8 @@ export default class Popup extends Evented {
         const offset = normalizeOffset(this.options.offset);
 
         if (!anchor) {
-            const width = this._container.offsetWidth;
-            const height = this._container.offsetHeight;
+            const width = this._container.clientWidth;
+            const height = this._container.clientHeight;
             let anchorComponents;
 
             if (pos.y + offset.bottom.y < height) {

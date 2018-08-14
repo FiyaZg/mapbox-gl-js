@@ -78,7 +78,7 @@ class LogoControl {
         const containerChildren = this._container.children;
         if (containerChildren.length) {
             const anchor = containerChildren[0];
-            if (this._map.getCanvasContainer().offsetWidth < 250) {
+            if (this._map.getCanvasContainer().clientWidth < 250) {
                 anchor.classList.add('mapboxgl-compact');
             } else {
                 anchor.classList.remove('mapboxgl-compact');

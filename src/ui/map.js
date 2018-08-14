@@ -1345,10 +1345,10 @@ class Map extends Camera {
      *  required.*
      * @param {Object} state A set of key-value pairs. The values should be valid JSON types.
      *
-     * This method requires the `feature.id` attribute on data sets. For GeoJSON sources without 
-     * feature ids, set the `generateIds` option in the `GeoJSONSourceSpecification` to auto-assign them. This 
-     * option assigns ids based on a feature's index in the source data. Changing the feature data using 
-     * `map.getSource('some id').setData(..)` resets the cache of feature states and requires the 
+     * This method requires the `feature.id` attribute on data sets. For GeoJSON sources without
+     * feature ids, set the `generateIds` option in the `GeoJSONSourceSpecification` to auto-assign them. This
+     * option assigns ids based on a feature's index in the source data. Changing the feature data using
+     * `map.getSource('some id').setData(..)` resets the cache of feature states and requires the
      * caller re-apply the state as needed with the updated `id` values.
      */
     setFeatureState(feature: { source: string; sourceLayer?: string; id: string; }, state: Object) {
@@ -1415,8 +1415,8 @@ class Map extends Camera {
         let height = 0;
 
         if (this._container) {
-            width = this._container.offsetWidth || 400;
-            height = this._container.offsetHeight || 300;
+            width = this._container.clientWidth || 400;
+            height = this._container.clientHeight || 300;
         }
 
         return [width, height];
